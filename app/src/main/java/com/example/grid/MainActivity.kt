@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(item3)
         arrayList.add(item4)
         val adapter = AdapterGrid(arrayList)
-        val layoutManager= GridLayoutManager(this, 2)
+        val layoutManager= LinearLayoutManager(this)
         val recuclerview = recycler as RecyclerView
         recuclerview.adapter = adapter
         recuclerview.layoutManager = layoutManager
